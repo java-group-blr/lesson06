@@ -1,9 +1,9 @@
-package lessom06.task01.devlist;
+package lessom06.task01.array;
 
 import java.util.*;
 
-public class DeveloperLIst {
-    public void developerlist(String[] array) {
+public class ArraytoList {
+    public static List<String> Teamlist(String[] array) {
         Scanner sc = new Scanner(System.in);
         String[] devarray = array;
         List<String> devList = new ArrayList<String>();
@@ -19,5 +19,6 @@ public class DeveloperLIst {
             System.out.println(devList.get(i));
         }
         System.out.println("----------------------------------------------------");
+    return devList ;
     }
 }

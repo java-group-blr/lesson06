@@ -3,7 +3,7 @@ package lessom06.task01.array;
 import java.util.*;
 
 public class Array {
-    public String[] developerArray() {
+    public String[] arrayDeveloper() {
         Scanner input = new Scanner(System.in);
         System.out.println("Введите размер команды :  ");
         int size = input.nextInt();
