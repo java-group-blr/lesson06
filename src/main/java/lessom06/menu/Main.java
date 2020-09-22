@@ -30,6 +30,13 @@ public class Main {
         for (String dev : linkedDeveloper){
             System.out.println(dev);
         }
+        System.out.println("--------------------------");
+        linkedDeveloper.remove("Инесса C ++ developer");
+        System.out.println("-----------------------------");
+        for (String dev : linkedDeveloper){
+            System.out.println(dev);
+        }
+        System.out.println("_-------------------------");
 
 
 

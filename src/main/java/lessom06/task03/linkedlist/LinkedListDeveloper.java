@@ -1,6 +1,7 @@
 package lessom06.task03.linkedlist;
 
 import java.util.Iterator;
+
 /*
 1.Linkedlist В нутри нету массива.
 2.Каждая ячейка листа это объект класса.
@@ -58,9 +59,48 @@ public class LinkedListDeveloper<E> implements LinkedList<E>, Iterable<E> {
     }
 
     @Override
-    public boolean removeElement(int element) {
-
+    public boolean remove(Object o) {
+        if (o == null) {
+            for (Node<E> x = fstNode; x != null; x = x.nextElement) {
+                if (x.element == null) {
+                    unlink(x);
+                    return true;
+                }
+            }
+        } else {
+            for (Node<E> x = fstNode; x != null; x = x.nextElement) {
+                if (o.equals(x.element)) {
+                    unlink(x);
+                    return true;
+                }
+            }
+        }
         return false;
+    }
+
+    E unlink(Node<E> x) {
+        // assert x != null;
+        final E element = x.element;
+        final Node<E> next = x.nextElement;
+        final Node<E> prev = x.privElement;
+
+        if (prev == null) {
+            fstNode = next;
+        } else {
+            prev.nextElement = next;
+            x.privElement = null;
+        }
+
+        if (next == null) {
+            lstNode = prev;
+        } else {
+            next.privElement = prev;
+            x.nextElement = null;
+        }
+
+        x.element = null;
+        size--;
+        return element;
     }
 
     @Override

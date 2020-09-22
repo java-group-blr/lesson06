@@ -1,6 +1,7 @@
 package lessom06.task02.arraylist;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 
 /*
 1.ArrayList хранит данные в массиве.
