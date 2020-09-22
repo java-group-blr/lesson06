@@ -2,12 +2,20 @@ package lessom06.task02.arraylist;
 
 import java.util.Iterator;
 
+/*
+1.ArrayList хранит данные в массиве.
+2.При добовлении мы всегда увеличиваем массив.
+3.Быстрый доступ к элементам
+4.Отлично подходит для работы за счёт быстрого доступа к элементам
+
+ */
 public class ArrayListDeveloper<E> implements ListDeveloper<E> {
     private E[] values;
 
     public ArrayListDeveloper() {
         values = (E[]) new Object[0];
     }
+
     @Override
     public boolean add(E e) {
         E[] temp = values;
@@ -22,8 +30,8 @@ public class ArrayListDeveloper<E> implements ListDeveloper<E> {
         E[] temp = values;
         values = (E[]) new Object[temp.length + 1];
         System.arraycopy(temp, 0, values, 0, index);
-        int afterIndex = temp.length - index-1;
-        System.arraycopy(temp, index+1, values, index, afterIndex);
+        int afterIndex = temp.length - index - 1;
+        System.arraycopy(temp, index + 1, values, index, afterIndex);
     }
 
     @Override
