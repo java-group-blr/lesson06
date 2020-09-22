@@ -21,9 +21,8 @@ public class Array {
     }
 
     public List<String> arraySort(String[] array) {
-        String[] devarray = array;
         List<String> devList = new ArrayList<String>();
-        devList = Arrays.asList(devarray);
+        devList = Arrays.asList(array);
         Collections.sort(devList);
         for (int i = 0; i < devList.size(); i++) {
             System.out.println(devList.get(i));
