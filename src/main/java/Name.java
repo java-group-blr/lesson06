@@ -3,20 +3,22 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public abstract class Name  {
+public  class Name {
 
-        public static void name() {
+        public static ArrayList name() {
             String[] name = {"Liseenko", "Avramenko", "Avdeev"};
 
-            List<String> listName = new ArrayList(10);
-            listName = Arrays.asList(name);
-            for (String str : listName) ;
+            List<String> listName = new ArrayList<String>(Arrays.asList(name));
             System.out.println(listName);
+            listName.add("Kireev");
+            listName.add("Kravcov");
+            listName.add("Borisov");
             Collections.sort(listName);
             for (Object i : listName) {
-
                 System.out.println(i);
             }
+            return (ArrayList) listName;
+
         }
 }
 

@@ -3,11 +3,13 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class Array {
-    public static void arrSort() {
-int[] nom = {34,65,24};
+    public static ArrayList<Integer> arrSort() {
+
+        int[] nom = {34, 65, 24};
 
         ArrayList<Integer> arraylist = new ArrayList<Integer>(10);
-        Collections.addAll(arraylist, 34,65,24);
+        for (int j : nom)
+            arraylist.add(j);
         arraylist.add(10);
         arraylist.add(4);
         arraylist.add(12);
@@ -16,9 +18,11 @@ int[] nom = {34,65,24};
         arraylist.remove(0);
         System.out.println(arraylist);
         Collections.sort(arraylist);
-                for (Object i : arraylist) {
-                System.out.println(i);
-            }
+
+        for (Object i : arraylist) {
+            System.out.println(i);
+        }
+        return arraylist;
     }
 }
 
