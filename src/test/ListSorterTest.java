@@ -87,4 +87,34 @@ public class ListSorterTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void sortObjectFromMaxToMinByComparableTest() {
+        List test = new ArrayList<Person>();
+
+        Person p1 = new Person("Max", "Fry");
+        Person p2 = new Person("Andrey", "Petrov");
+        Person p3 = new Person("Vitaly", "Ivanov");
+        Person p4 = new Person("Fedor", "Ivanov");
+        Person p5 = new Person("Ivan", "Sidorov");
+
+        test.add(p1);
+        test.add(p2);
+        test.add(p3);
+        test.add(p4);
+        test.add(p5);
+
+        List expected = new ArrayList<Integer>();
+        expected.add(p1);
+        expected.add(p4);
+        expected.add(p3);
+        expected.add(p2);
+        expected.add(p5);
+
+        ListSorter sorter = new ListSorter();
+        List actual = sorter.sortObjectFromMaxToMinByComparable(test);
+
+        Assert.assertEquals(expected, actual);
+    }
+
 }
